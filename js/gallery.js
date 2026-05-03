@@ -76,11 +76,11 @@ galleryElem.addEventListener("click", (event) => {
   if (!img) return;
 
   const originImgUrl = img.dataset.source;
-  console.log(originImgUrl);
+  const altText = img.alt;
 
   instance = basicLightbox.create(
     `
-      <img src="${originImgUrl}" alt="${img.description}" width="800" height="600"/> `,
+      <img src="${originImgUrl}" alt="${altText}" width="800" height="600"/> `,
   );
 
   instance.show();
